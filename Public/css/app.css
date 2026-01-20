@@ -155,14 +155,12 @@ body {
 }
 
 .btn-video span {
-  background: #ce1212;
-  color: #fff;
-  width: 35px;
-  height: 35px;
+  color: #ce1212;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 32px;
 }
 
 .hero-image img {
@@ -312,3 +310,120 @@ body {
   width: 100%;
   margin-top: 20px;
 }
+
+/* ===== WHY US ===== */
+.why-us {
+  background: #f7f7f7;
+  padding: 80px 0;
+}
+
+.why-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+/* LEFT */
+.why-left {
+  background: #ce1212;
+  color: #fff;
+  padding: 30px;
+  flex: 0.8;
+}
+
+.why-left h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.why-left p {
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.why-btn {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-btn:hover {
+  background: #fff;
+  color: #ce1212;
+}
+
+/* RIGHT */
+.why-right {
+  display: flex;
+  gap: 20px;
+  flex: 2;
+}
+
+.why-card {
+  background: #fff;
+  padding: 100px 45px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.why-card .icon {
+  width: 70px;
+  height: 70px;
+  background: #fdecec;
+  color: #ce1212;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin: 0 auto 20px;
+}
+
+.why-card:hover .icon {
+    background-color: #ce1212;
+    color: #fdecec;
+}
+
+.why-card h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.why-card p {
+  font-size: 14px;
+  color: #7f7f90;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .why-wrapper {
+    flex-direction: column;
+  }
+
+  .why-right {
+    flex-direction: column;
+  }
+}
+.why-left,
+.why-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.7s ease;
+}
+
+.why-us.show .why-left,
+.why-us.show .why-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+

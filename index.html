@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Yummy</title>
 </head>
 
@@ -20,12 +21,12 @@
 
             <ul class="nav-links">
                 <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Chefs</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#chefs">Chefs</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
 
             <a href="#" class="btn-book">Book a Table</a>
@@ -48,7 +49,7 @@
 
                 <div class="hero-buttons">
                     <a href="#" class="btn-main">Book a Table</a>
-                    <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn-video"><span></span> Watch Video
+                    <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn-video"><span><i class="fa-regular fa-circle-play"></i></span> Watch Video
                     </a>
                 </div>
             </div>
@@ -61,7 +62,7 @@
     </section>
 
     <!-- ===== ABOUT ===== -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
 
             <div class="section-title">
@@ -88,9 +89,9 @@
                     </p>
 
                     <ul>
-                        <li><span>✓</span> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                        <li><span>✓</span> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                        <li><span>✓</span> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                        <li><span><i class="fa-solid fa-circle-check"></i></span> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                        <li><span><i class="fa-solid fa-circle-check"></i></span> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                        <li><span><i class="fa-solid fa-circle-check"></i></span> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
                             dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla
                             pariatur.</li>
                     </ul>
@@ -108,6 +109,53 @@
         </div>
     </section>
 
+    <!-- ===== WHY US ===== -->
+    <section class="why-us">
+        <div class="container why-wrapper">
+
+            <!-- LEFT RED BOX -->
+            <div class="why-left">
+                <h3>Why Choose Yummy?</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Duis aute irure dolor in reprehenderit Asperiores dolores sed et. Tenetur
+                    quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                </p>
+                <a href="#" class="why-btn">Learn More<i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+
+            <!-- RIGHT CARDS -->
+            <div class="why-right">
+
+                <div class="why-card">
+                    <div class="icon"><i class="fa-regular fa-clipboard"></i></div>
+                    <h4>Corporis voluptates officia eiusmod</h4>
+                    <p>
+                        Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="icon"><i class="fa-regular fa-gem"></i></div>
+                    <h4>Ullamco laboris ladore lore pan</h4>
+                    <p>
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="icon"><i class="fa-solid fa-inbox"></i></div>
+                    <h4>Labore consequatur incidid dolore</h4>
+                    <p>
+                        Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   
     <script src="./Public/js/app.js"></script>
 </body>
 
