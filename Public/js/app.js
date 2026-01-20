@@ -1,5 +1,5 @@
-const burger = document.querySelector(".burger");
-const navLinks = document.querySelector(".nav-links");
+let burger = document.querySelector(".burger");
+ navLinks = document.querySelector(".nav-links");
 
 burger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
@@ -8,3 +8,5 @@ burger.addEventListener("click", () => {
 window.addEventListener("load", () => {
   document.querySelector(".hero-text").classList.add("show");
 });
+
+///////////////////
