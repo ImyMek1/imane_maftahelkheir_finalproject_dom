@@ -459,6 +459,118 @@
         </div>
     </section>
 
+    <!-- ===== EVENTS ===== -->
+    <!-- <section class="events" id="events">
+
+  <div class="events-slider">
+    <div class="events-track">
+
+      <div class="event-card" style="background-image:url('/Public/Yummy/events-1.jpg')">
+        <div class="overlay">
+          <h3>Custom Parties</h3>
+          <div class="price">$99</div>
+          <p>
+            Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis facere.
+          </p>
+        </div>
+      </div>
+
+      <div class="event-card" style="background-image:url('/Public/Yummy/events-2.jpg')">
+        <div class="overlay">
+          <h3>Private Parties</h3>
+          <div class="price">$289</div>
+          <p>
+            In delectus sint qui et enim. Et ab repudiandae inventore quaerat doloribus.
+          </p>
+        </div>
+      </div>
+
+      <div class="event-card" style="background-image:url('/Public/Yummy/events-3.jpg')">
+        <div class="overlay">
+          <h3>Birthday Parties</h3>
+          <div class="price">$499</div>
+          <p>
+            Laborum aperiam atque omnis minus omnis est qui assumenda quos.
+          </p>
+        </div>
+      </div>
+
+      <div class="event-card" style="background-image:url('/Public/Yummy/events-4.jpg')">
+        <div class="overlay">
+          <h3>Weddings Parties</h3>
+          <div class="price">$899</div>
+          <p>
+            Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis facere.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section> -->
+
+    <!-- ===== BOOK A TABLE ===== -->
+    <section class="book" id="book">
+        <div class="container">
+
+            <div class="section-title">
+                <h3>BOOK A TABLE</h3>
+                <h2>Book Your <span>Stay With Us</span></h2>
+            </div>
+
+            <div class="book-content">
+                <div class="book-right">
+                    <img src="/Public/Yummy/reservation.jpg" alt="">
+                </div>
+                <div class="book-left">
+                    <h3>Reservation</h3>
+                    <p>Book a table and enjoy our best dishes.</p>
+                    <button class="btn-book" id="openModal">Booking Table</button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== MODAL ===== -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+
+            <h2>Book Your Table</h2>
+
+            <form id="bookingForm">
+
+                <label>Full Name</label>
+                <input type="text" id="fullName" required>
+
+                <label>Meal</label>
+                <select id="meal" required>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+
+                <label>Date</label>
+                <input type="date" id="date" required>
+
+                <label>Start Time</label>
+                <input type="time" id="startTime" required>
+
+                <label>End Time</label>
+                <input type="time" id="endTime" required>
+
+                <label>Number of People</label>
+                <input type="number" id="people" min="1" max="10" required>
+
+                <button type="submit" class="btn-submit">Confirm Booking</button>
+                <div id="message"></div>
+            </form>
+        </div>
+    </div>
+
 
     <script src="./Public/js/app.js"></script>
 </body>

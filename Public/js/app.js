@@ -107,3 +107,89 @@ setInterval(() => {
   index = (index + 1) % slides.length;
   goToSlide(index);
 }, 5000);
+
+///////////////////////////////////
+// let track_Ev = document.querySelector(".events-track");
+// let cards = document.querySelectorAll(".event-card");
+
+// let indexev = 0;
+
+// function slideEvents() {
+//   let cardWidth = cards[0].offsetWidth + 30;
+//   indexev++;
+
+//   track_Ev.style.transform = `translateX(-${indexev * cardWidth}px)`;
+
+//   if (indexev >= cards.length - 3) {
+//     setTimeout(() => {
+//       track_Ev.style.transition = "none";
+//       index = 0;
+//       track_Ev.style.transform = "translateX(0)";
+//     }, 700);
+
+//     setTimeout(() => {
+//       track_Ev.style.transition = "transform 0.6s ease";
+//     }, 750);
+//   }
+// }
+
+// setInterval(slideEvents, 4000);
+
+
+//////////////////////////////////
+
+let openModal = document.getElementById("openModal");
+let closeModal = document.getElementById("closeModal");
+let modal = document.getElementById("modal");
+let form = document.getElementById("bookingForm");
+let message = document.getElementById("message");
+
+let bookings = []; 
+
+openModal.addEventListener("click", () => {
+  modal.style.display = "flex";
+});
+
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let booking = {
+    name: document.getElementById("fullName").value,
+    meal: document.getElementById("meal").value,
+    date: document.getElementById("date").value,
+    startTime: document.getElementById("startTime").value,
+    endTime: document.getElementById("endTime").value,
+    people: document.getElementById("people").value
+  };
+
+  let conflict = bookings.find(b => 
+    b.date === booking.date &&
+    b.meal === booking.meal &&
+    !(booking.endTime <= b.startTime || booking.startTime >= b.endTime)
+  );
+
+  if (conflict) {
+    message.style.color = "red";
+    message.innerText = "This time slot is already booked. Please choose another time.";
+  } else {
+    bookings.push(booking);
+    message.style.color = "green";
+    message.innerText = "Booking confirmed!";
+
+    form.reset();
+    setTimeout(() => {
+      modal.style.display = "none";
+      message.innerText = "";
+    }, 1500);
+  }
+});
