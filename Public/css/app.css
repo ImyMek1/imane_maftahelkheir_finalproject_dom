@@ -571,5 +571,99 @@ body {
   }
 }
 
+/* ===== Testimonials ===== */
+.testimonials {
+  padding: 80px 0;
+}
+
+.testimonials .container {
+    background: #f7f7f7
+}
+
+.slider {
+  overflow: hidden;
+  max-width: 900px;
+  margin: auto;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.testimonial {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  border-left: 4px solid #ce1212;
+}
+
+.text p {
+  font-style: italic;
+  color: #555;
+  line-height: 1.7;
+}
+
+.quote {
+  color: #ce1212;
+  font-size: 22px;
+}
+
+.text h4 {
+  margin: 10px 0 4px;
+}
+
+.role {
+  color: #999;
+  font-size: 14px;
+}
+
+.stars {
+  color: #ffc107;
+  margin-top: 8px;
+}
+
+.testimonial img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #ce1212;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .testimonial {
+    flex-direction: column;
+    text-align: center;
+    border-left: none;
+    border-top: 4px solid #ce1212;
+  }
+}
+
+
 
 

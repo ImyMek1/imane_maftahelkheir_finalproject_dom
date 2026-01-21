@@ -83,3 +83,27 @@ window.addEventListener("load", () => {
   filters[0].click();
 });
 
+//////////////////////////
+let track = document.querySelector(".slider-track");
+let slides = document.querySelectorAll(".slide");
+let dots = document.querySelectorAll(".dot");
+let index = 0;
+
+function goToSlide(i) {
+  track.style.transform = `translateX(-${i * 100}%)`;
+
+  dots.forEach(d => d.classList.remove("active"));
+  dots[i].classList.add("active");
+}
+
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    index = i;
+    goToSlide(index);
+  });
+});
+
+setInterval(() => {
+  index = (index + 1) % slides.length;
+  goToSlide(index);
+}, 5000);
