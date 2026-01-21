@@ -55,3 +55,31 @@ window.addEventListener("scroll", () => {
     statsStarted = true;
   }
 });
+
+//////////////////////////
+let filters = document.querySelectorAll(".menu-filters li");
+let items = document.querySelectorAll(".menu-item");
+
+filters.forEach(filter => {
+  filter.addEventListener("click", () => {
+
+    filters.forEach(f => f.classList.remove("active"));
+    filter.classList.add("active");
+
+    let category = filter.dataset.filter;
+
+    items.forEach(item => {
+      if (item.classList.contains(category)) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  });
+});
+
+window.addEventListener("load", () => {
+  filters[0].classList.add("active");
+  filters[0].click();
+});
+
