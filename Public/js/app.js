@@ -138,16 +138,19 @@ setInterval(() => {
 
 //////////////////////////////////
 
-let openModal = document.getElementById("openModal");
-let closeModal = document.getElementById("closeModal");
 let modal = document.getElementById("modal");
+let closeModal = document.getElementById("closeModal");
 let form = document.getElementById("bookingForm");
 let message = document.getElementById("message");
+let openButtons = document.querySelectorAll(".open-book-modal");
 
-let bookings = []; 
+let bookings = [];
 
-openModal.addEventListener("click", () => {
-  modal.style.display = "flex";
+openButtons.forEach(button => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.style.display = "flex";
+  });
 });
 
 closeModal.addEventListener("click", () => {
@@ -180,7 +183,7 @@ form.addEventListener("submit", (e) => {
 
   if (conflict) {
     message.style.color = "red";
-    message.innerText = "This time slot is already booked. Please choose another time.";
+    message.innerText = "This time slot is already booked.";
   } else {
     bookings.push(booking);
     message.style.color = "green";
